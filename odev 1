@@ -1,0 +1,68 @@
+                                                   VERİTABANI SİSTEMLERİ
+GİRİŞ
+ İşletmelerde kullanılan bilgi sistemleri stratejik, organizasyonel gereksinimlerin karşılanması için veritabanı geliştirilmesine ihtiyaç duyar. Bu sayede müşteri desteği sağlanır, daha iyi üretim ve envanter takibi veya daha doğru satış planlaması yapılabilir. Veritabanı geliştirme süreci mevcut veri işleme adımlarının, genel işletme fonksiyonlarının ve onların veri gereksinimlerinin analizi ile başlar. Böylece varsa mevcut veritabanındaki veriler ve işletmenin ihtiyaç duyduğu yeni veriler ortaya konulmuş olur. Veritabanında saklanacak veriler ve bunları kullanan geliştirilecek uygulamalar ve performans gereksinimlerinin belirlendiği bu aşama “gereksinim analizi” olarak adlandırılır. İzleyen aşamalarda ise kavramsal, mantıksal ve fiziksel veritabanı tasarımı gerçekleştirilir. Bu tasarım aşamaları izleyen kesimde verilmiştir. Veritabanı tasarımını ifade etmek için üst seviye tasarım modelleri kullanılır. Bu modellerle veritabanı kullanıcılarının ihtiyaçlarının tasarımdaki karşılığı açık ve anlaşılır biçimde ortaya konulmuş olur. En yaygın kullanılan veritabanı tasarım modeli Varlık İlişki (ER-Entity Relationship model) modelidir. Günümüzde yaygın olarak kullanılmaya başlanılan diğer bir modelde tümleşik modelleme dili şemasıdır (UML-Unified Modelling Language).
+ VERİTABANI TASARIM AŞAMALARI
+ Veritabanı tasarım aşamaları üç aşamadan oluşmaktadır. Bunlar kavramsal veri modelleme (conceptual data modeling), mantıksal veri modelleme (logical data modeling) ve fiziksel veri modellemedir (physical data modeling). Veritabanı tasarımını ifade eden modeller ile kullanıcılar ve geliştirme ekibi tasarıma son hâlini verir. İzleyen süreçlerde de veri tasarım modeli, geliştirme ekibi tarafından gerçeklenir.
+ Kavramsal Veri Modeli 
+Kavramsal veri modeli (conceptual data model) veritabanında saklanacak verilerin, kısıtlarının ve ilişkilerinin bir gösterimidir.Kavramsal veri modelleme genellikle sistem analizi sırasında diğer gereksinim analizi ve yapılandırma adımları ile paralel olarak yapılır. Bu model ile kullanıcıların gereksinimleri ve bu gereksinimleri karşılayacak tasarım tam olarak ifade edilmiş olur. Kavramsal veri modeli varlık ilişki diyagramının tasarlanması ya da tümleşik modelleme dili şeması ile oluşturulur. Kavramsal veri modeli sistem geliştirme süreci boyunca uygulanır.
+
+Kavramsal Veri Modelinin Özellikleri 
+• İşletmenin genelini kapsayan iş kavramlarını kapsar.
+ • Stratejik veri projelerinde en sık kullanılan veri modelidir.
+ • Kullanıcı gereksinimlerini karşılamak için oluşturulur.
+ • Proje yöneticisi tarafından proje süreç izlemede kullanılır.
+ • Yüksek seviye veri yapılarını içerir.
+ • Yetkili ve yöneticilerin tüm seviyelerdeki mimari tanımların veri prensibini anlayabilecekleri teknik olmayan isimler kullanılır.
+ • Varlıklar, ilişkiler ve bunların özelliklerini içerir
+ 
+Mantıksal Veri Modeli 
+Mantıksal veri modeli (logical data model) Kavramsal modelin seçilen veritabanı yönetim sisteminin veritabanı şemasına dönüştürülmesidir. Bu kitapta veri tabanı yönetim sistemi olarak ilişkisel veri tabanı yönetim sistemi anlatılmaktadır. Bu nedenle mantıksal tasarımda da kavramsal modelin ilişkisel veritabanı şemalarına dönüştürülmesi açıklanmıştır. Mantıksal veri modeli ilişkisel veritabanı teknolojilerinden bağımsız, veri depolama, veri kısıtları ve ilişkiler tarafından tamamıyla bağlanmış veri modelidir. Bir mantıksal veri modeli insanları, yerleri, nesneleri, kuralları ve ilişkiler ile onlar arasındaki olayları standartlaştırır.
+Mantıksal Veri Modelinin Özellikleri 
+• Tüm varlıkları ve aralarındaki ilişkileri içermektedir.
+ • Her varlığın tüm öznitelikleri belirlenmiştir. 
+• Her varlık için benzersiz anahtar belirtilir. 
+• Farklı varlıklar arasındaki ilişkiyi tanımlayan yabancı anahtarlar belirtir. 
+• Bu aşamada Normalleştirme uygulanır. 
+• Veri modeli kapsamına bağlı olmakla birlikte tipik olarak 50-1000 arasında varlık içerir
+. • Veritabanı yönetim sisteminden, veri depolama konumlarından ya da teknolojilerinden bağımsız olarak oluşturulur
+. • Varlıklar ve öznitelikler tanımlara sahip olur.
+ • Veri özniteliklerinin kısıtları ve veri türleri genellikle belirlenmiş olur.
+Fiziksel Veri Modeli
+ Fiziksel veri modeli (physical data model) veri süreklilik teknolojisinin belirli bir sürümü ile bağımlı, tamamıyla bağlanmış veri modelidir. Burada hedeflenen teknoloji ilişkisel bir veritabanı yönetim sistemi (ACCESS, MS SQL, ORACLE vb.) , XML dokümanı, elektronik tablo veya başka bir veri uygulama seçeneği olabilir. Fiziksel veri modeli veritabanının nasıl inşa edileceğini belirtir. Bir fiziksel veritabanı modeli, sütun adı, sütun veri türü, sütun kısıtlamaları, birincil anahtar, yabancı anahtar ve tablolar arasındaki ilişkiler de dâhil olmak üzere tüm tablo yapılarını göstermektedir. Bu aşamada veritabanının tipik yük altında istenilen performans ölçütlerini sağlaması için tasarımında iyileştirmeler yapılır. Tablolarda indeksler oluşturma, tabloları birleştirme ve hatta önceki tasarım aşamalarından oldukça farklı yeni yapılar kullanmak söz konusu olabilir. Kavramsal ve mantıksal tasarımda değişikliğe gidilmesi durumunda önceden oluşturulmuş olan tasarım modellerinin güncellenmesi gerekecektir.
+Fiziksel Veri Modelinin Özellikleri
+ • Tüm tablo ve sütunlar belirtilir. 
+• Tablolar arasındaki ilişki yabancı anahtar ile sağlanır
+. • Denormalization kullanıcı gereksinimlerine ve performans ölçütlerine dayalı olarak oluşabilir.
+ • Fiziksel veri modeli farklı ilişkisel veritabanı yönetim sistemleri için farklılık gösterebilir. 
+• Veritabanı yönetim sisteminin belirli bir sürümü, veri depolama konumları ya da teknolojileri için bağımlı olarak tasarlanmış ve geliştirilmiştir.
+ • Öznitelikler genellikle duyarlı ve uzunlukları atanmış veri türlerine sahip olacaktır.
+VARLIK İLİŞKİ MODELLEME
+ Varlık ilişki modelleme bir işletme veya iş alanında kullanılan verilerin detaylı ve mantıksal gösterimidir. Varlık ilişki modeli gerçek hayattaki varlıklar, aralarındaki ilişkiler ve varlıklar ile ilişkilerin özelliklerini içerir. Veri ilişki modelinin özellikle veritabanı tasarımındaki rolü önemlidir. Bu model ile kullanıcıların formal olmayan beklentileri veritabanı yönetim sisteminde gerçekleştirecek şekilde daha detaylı ve açık tanımlanmış olur. Varlık İlişki modeli grafiksel olarak varlık ilişki diyagramı ile ifade edilir. İlişkisel veritabanı modeli oluşturulabilmesi için öncelikle ilgili veriler çözümlenir, çözümlenen bu verilerin birbiri ile ilişkileri incelenir ve sonrasında varlık ilişki modellemeden yararlanılıp varlık ilişki diyagramları oluşturulur. Bu varlık ilişki diyagramları veritabanında yer alacak olan tabloları, tabloların birbirlerine bağlantılarını ve tablolar ile bağlantıların özelliklerini ortaya çıkarır ve ilişkisel veritabanı modelini oluşturur. Bu model ile ilk veritabanı tasarımı oluşturulmuş olur.
+
+Varlık ilişki modelinde veri yapısı grafiksel olarak gösterilirken üç temel öge kullanılır. Bunlar; 
+ Varlıklar, Öznitelikler, İlişkilerdir.
+
+Varlıklar (Entity)
+ Varlık işletmenin verisini tutmak istediği kullanıcı ortamındaki kişi, yer, nesne, olay veya kavramı temsil eder. Bu varlık çeşitleri için bazı örnekler şunlardır:
+ Kişi : Çalışan, öğrenci, hasta 
+Yer : Depo, ambar, şehir
+ Nesne : Makine, inşaat, araç 
+Olay : Satış, kayıt, sözleşme yenileme 
+Kavram : Muhasebe hesabı, okulda verilen ders
+ Ortak özellikleri veya karakteristikleri içeren varlıkların oluşturduğu kümeye varlık kümesi denir. Varlık kümesindeki bir varlığa ise varlık örneği denir. Model içerisinde varlık kümesi dikdörtgen ile gösterilir ve içine varlığın adı yazılır. Mantıksal veritabanı tasarımında varlık kümesi tablo ile gösterilir.
+
+Öznitelikler (Attributes)
+ Her bir varlık kümesinin özellikleri olur. Öznitelik, işletmede kullanılan varlık kümesinin özellikleri veya karakteristikleridir (izleyen kesimde anlatılacak olan İlişkilerinde öznitelikleri olabilir). Modelde öznitelikler oval ile gösterilir ve içine adı yazılır. Öznitelik bağlı olduğu varlık kümesine düz çizgi ile bağlanır.
+
+İlişki 
+İlişkiler veri modelinde farklı ögeleri bir arada tutar. En az iki varlık kümesi arasındaki etkileşimi gösteren bağlantıya ilişki (relationship) denir. İlişkiler iki varlık kümesi arasında olabileceği gibi çoklu şekilde de olabilmektedir. İlişkiler varlık ilişki diyagramında eşkenar dörtgen yani baklava dilimi şekliyle gösterilir ve içerisine ilişkinin adı yazılır. İlişkileri örneklemek üzere bir işletmede çalışanlar ve aldıkları eğitimleri saklayan Çalışan ve Eğitim varlık kümeleri tanımlansın. Hangi çalışanın hangi eğitimi aldığını izlemek üzere Çalışan ve Eğitim varlık kümeleri arasında Alır ilişkisi oluşturulur.
+
+İlişkisel Varlıklar
+Bir ilişkinin özniteliği birden fazla ise bu ilişki bir varlık olarak gösterilebilir. Bu tip varlıklar ilişkisel varlık olarak adlandırılır. Şekil 2.5’te Çalışan ve Eğitim varlık kümeleri arasındaki bağlantı ilişki ve üzerinde özniteliği ile gösterilirken Şekil 2.6’da ilişkiyi tanımlayan öznitelik sayısı arttığından ilişkisel varlık gösterimi kullanılmıştır. Örnekte Sertifika ilişkisel varlığı oluşturulmuştur.
+	
+Bire Bir İlişkilerin Tablolara Dönüştürülmesi
+ Bire bir ilişkideki varlık kümeleri tablolara dönüştürülür. Öznitelikler ise tabloların sütunlarını oluşturur. İlişkileri oluşturmak için, bir varlık kümesinin anahtar özniteliği tabloda birincil anahtar olarak tanımlanır ve bu birincil anahtar diğer tabloda yabancı anahtar olarak belirlenir. İlişkideki anahtar özniteliklerin hangisinin birincil anahtar veya yabancı anahtar olacağına tabloların içereceği bilgilere göre karar verilir.
+Bire Çok veya Çoka Bir İlişkilerin Tablolara Dönüştürülmesi 
+Varlık kümeleri tablolara dönüştürülür. Öznitelikler tabloların sütunları olarak tanımlanır. İlişkinin birli (1) tarafındaki tablodaki öznitelik birincil anahtar olarak tanımlanır ve ilişkinin çoklu (n) tarafındaki tabloya yabancı anahtar olarak eklenir.
+Çoka Çok İlişkilerin Tablolara Dönüştürülmesi 
+Varlık kümeleri tablolara dönüştürülür. Varlık kümeleri arasındaki ilişki (ilişkisel varlık) içinde tablo oluşturulur. Öznitelikler tabloların sütunları olarak tanımlanır. Her bir tabloda birincil anahtarlar tanımlanır. Varlık kümelerinin birincil anahtarları ilişkiyi oluşturan tabloya sütun olarak eklenir. İlişkiye karşılık oluşturulan tablonun sütunları; kendi birincil anahtarından, diğer kümelerden gelen yabancı anahtarlardan ve tabloya ait özniteliklerden oluşur. Böylece tablolar arasında çoka çok ilişki, bire çoklu ve çoka birli ilişkilere dönüştürülmüş olur.
